@@ -30,7 +30,7 @@ function ChatWindow() {
         };
 
         try {
-            const response = await fetch(`${process.env.REACT_APP_API_URL}/chat, options);
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/chat`, options);
             const res = await response.json();
             console.log(res);
             setReply(res.reply);
