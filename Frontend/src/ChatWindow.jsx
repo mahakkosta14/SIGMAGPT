@@ -1,11 +1,11 @@
 import "./ChatWindow.css";
-import Chat from "./Chat.js";
+import Chat from "./Chat.jsx";
 import { MyContext } from "./MyContext.jsx";
 import { useContext, useState, useEffect } from "react";
 import {ScaleLoader} from "react-spinners";
-import Settings from "./Setting.js";
-import UpgradePlan from "./upgradePlan.js";
-import About from "./About.js";
+import Settings from "./Setting.jsx";
+import UpgradePlan from "./upgradePlan.jsx";
+import About from "./About.jsx";
 
 
 function ChatWindow() {

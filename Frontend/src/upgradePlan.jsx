@@ -1,5 +1,5 @@
 import './AllPages.css';
-import { MyContext } from "./MyContext";
+import { MyContext } from "./MyContext.jsx";
 import { useContext } from "react";
 
 export default function UpgradePlan() {
