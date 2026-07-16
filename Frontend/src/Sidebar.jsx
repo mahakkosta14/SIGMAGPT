@@ -1,11 +1,12 @@
 
 import "./Sidebar.css";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { MyContext } from "./MyContext.jsx";
 import {v1 as uuidv1} from "uuid";
 
 function Sidebar() {
     const {allThreads, setAllThreads, currThreadId, setNewChat, setPrompt, setReply, setCurrThreadId, setPrevChats} = useContext(MyContext);
+    const [isOpen, setIsOpen] = useState(false);
 
     const getAllThreads = async () => {
         try {
@@ -66,7 +67,17 @@ function Sidebar() {
     }
 
     return (
-        <section className="sidebar">
+        <> 
+        {/* Toggle button (mobile view only) */}
+      <button 
+        className="sidebar-toggle" 
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        ☰
+      </button>
+
+        {/* Sidebar with toggle */}
+        <section className={`sidebar ${isOpen ? "open" : ""}`}>
             <button onClick={createNewChat}>
                 <img src="src/assets/blacklogo.png" alt="gpt logo" className="logo"></img>
                 <span><i className="fa-solid fa-pen-to-square"></i></span>
@@ -96,6 +107,7 @@ function Sidebar() {
                 <p>By Mahak Kosta &hearts;</p>
             </div>
         </section>
+        </>
     )
 }
 
