@@ -1,6 +1,6 @@
 import "./ChatWindow.css";
 import Chat from "./Chat.js";
-import { MyContext } from "./MyContext.js";
+import { MyContext } from "./MyContext.jsx";
 import { useContext, useState, useEffect } from "react";
 import {ScaleLoader} from "react-spinners";
 import Settings from "./Setting.js";
